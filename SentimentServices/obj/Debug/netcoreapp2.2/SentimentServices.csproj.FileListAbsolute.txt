@@ -1,0 +1,9 @@
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\bin\Debug\netcoreapp2.2\SentimentServices.deps.json
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\bin\Debug\netcoreapp2.2\SentimentServices.dll
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\bin\Debug\netcoreapp2.2\SentimentServices.pdb
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\netcoreapp2.2\SentimentServices.csprojAssemblyReference.cache
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\netcoreapp2.2\SentimentServices.csproj.CoreCompileInputs.cache
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\netcoreapp2.2\SentimentServices.AssemblyInfoInputs.cache
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\netcoreapp2.2\SentimentServices.AssemblyInfo.cs
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\netcoreapp2.2\SentimentServices.dll
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\netcoreapp2.2\SentimentServices.pdb

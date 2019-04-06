@@ -1,0 +1,12 @@
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\bin\Debug\netcoreapp2.2\SentimentMediator.deps.json
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\bin\Debug\netcoreapp2.2\SentimentMediator.dll
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\bin\Debug\netcoreapp2.2\SentimentMediator.pdb
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\bin\Debug\netcoreapp2.2\SentimentServices.dll
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\bin\Debug\netcoreapp2.2\SentimentServices.pdb
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\obj\Debug\netcoreapp2.2\SentimentMediator.csprojAssemblyReference.cache
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\obj\Debug\netcoreapp2.2\SentimentMediator.csproj.CoreCompileInputs.cache
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\obj\Debug\netcoreapp2.2\SentimentMediator.AssemblyInfoInputs.cache
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\obj\Debug\netcoreapp2.2\SentimentMediator.AssemblyInfo.cs
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\obj\Debug\netcoreapp2.2\SentimentMediator.csproj.CopyComplete
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\obj\Debug\netcoreapp2.2\SentimentMediator.dll
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentMediator\obj\Debug\netcoreapp2.2\SentimentMediator.pdb
