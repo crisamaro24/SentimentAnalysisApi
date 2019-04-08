@@ -1,31 +1,55 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using Microsoft.ML;
-using SentimentServices.Models;
+using Microsoft.Extensions.ObjectPool;
+using Microsoft.AspNetCore.Hosting;
 
 namespace SentimentServices.Services
 {
-    public static class SentimentService
+    public class SentimentService<TData, TPrediction>
+        where TData : class
+        where TPrediction : class, new()
     {
-        static MLContext context = new MLContext();
-        static ITransformer model
-            = context.Model.Load(File.Open("C:/Users/amaro/source/repos/SentimentAnalysisApi/SentimentAnalysisApi/SentimentModel.zip", FileMode.Open));
+        private readonly MLContext _mlContext;
+        private readonly ITransformer _mlModel;
+        private readonly ObjectPool<PredictionEngine<TData, TPrediction>> _predictionEnginePool;
 
-        [ThreadStatic]
-        static PredictionEngine<SourceData, Prediction> t_engine;
+        private static string _sentimentModelFilePath = "TrainedModel\\SentimentModel.zip";
 
-        private static PredictionEngine<SourceData, Prediction> GetPredictionEngine()
+        public SentimentService(IHostingEnvironment hostingEnvironment)
         {
-            if (t_engine != null)
-                return t_engine;
+            _mlContext = new MLContext();
 
-            return t_engine = model.CreatePredictionEngine<SourceData, Prediction>(context);
+            string contentRootPath = hostingEnvironment.ContentRootPath;
+            string modelFullPath = Path.Combine(contentRootPath, _sentimentModelFilePath);
+
+            using (var fs = File.OpenRead(modelFullPath))
+            {
+                _mlModel = _mlContext.Model.Load(fs);
+            }
+
+            _predictionEnginePool = CreatePredictionEngineObjectPool();
         }
 
-        public static Prediction Predict(string text)
+        private ObjectPool<PredictionEngine<TData, TPrediction>> CreatePredictionEngineObjectPool()
         {
-            var engine = GetPredictionEngine();
-            return engine.Predict(new SourceData { SentimentText = text });
+            var predEnginePolicy = new PooledPredictionEnginePolicy<TData, TPrediction>(_mlContext, _mlModel);
+
+            return new DefaultObjectPool<PredictionEngine<TData, TPrediction>>(predEnginePolicy);
+        }
+
+        public TPrediction Predict(TData dataSample)
+        {
+            PredictionEngine<TData, TPrediction> predictionEngine = _predictionEnginePool.Get();
+
+            try
+            {
+                TPrediction prediction = predictionEngine.Predict(dataSample);
+                return prediction;
+            }
+            finally
+            {
+                _predictionEnginePool.Return(predictionEngine);
+            }
         }
     }
 }

@@ -4911,6 +4911,8 @@
         "dependencies": {
           "MediatR": "6.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "6.0.1",
+          "Microsoft.AspNetCore.App": "2.2.0",
+          "Microsoft.Extensions.ObjectPool": "2.2.0",
           "Microsoft.ML": "0.11.0"
         },
         "compile": {

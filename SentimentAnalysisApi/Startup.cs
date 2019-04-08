@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.IO;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using SentimentMediator;
+using SentimentServices.Models;
+using SentimentServices.Services;
 
 namespace SentimentAnalysisApi
 {
@@ -31,6 +27,8 @@ namespace SentimentAnalysisApi
 
             // Add MediatR
             services.AddMediatR(typeof(SentimentRequestHandler).Assembly);
+
+            services.AddSingleton<SentimentService<SourceData, Prediction>>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

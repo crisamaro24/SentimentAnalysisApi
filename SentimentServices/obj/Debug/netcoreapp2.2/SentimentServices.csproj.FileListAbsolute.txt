@@ -7,3 +7,5 @@ C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\net
 C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\netcoreapp2.2\SentimentServices.AssemblyInfo.cs
 C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\netcoreapp2.2\SentimentServices.dll
 C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\obj\Debug\netcoreapp2.2\SentimentServices.pdb
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\bin\Debug\netcoreapp2.2\SentimentServices.runtimeconfig.json
+C:\Users\amaro\source\repos\SentimentAnalysisApi\SentimentServices\bin\Debug\netcoreapp2.2\SentimentServices.runtimeconfig.dev.json
